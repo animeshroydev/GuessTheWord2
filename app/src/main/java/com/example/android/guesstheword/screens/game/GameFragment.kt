@@ -38,6 +38,7 @@ class GameFragment : Fragment() {
     // The current score
     private var score = 0
 
+    // GameViewModel
     private lateinit var viewModel: GameViewModel
 
     // The list of words - the front of the list is the next word to guess
@@ -56,6 +57,7 @@ class GameFragment : Fragment() {
                 false
         )
 
+        // used ViewModelProvider
         Log.i("GameFragment", "Called ViewModelProvider.get")
         viewModel = ViewModelProvider(this).get(GameViewModel::class.java)
 

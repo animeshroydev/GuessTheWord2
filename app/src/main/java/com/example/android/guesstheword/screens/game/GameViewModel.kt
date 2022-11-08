@@ -5,10 +5,12 @@ import androidx.lifecycle.ViewModel
 
 class GameViewModel: ViewModel() {
 
+    // init block
     init {
         Log.i("GameViewModel", "GameViewModel created!")
     }
 
+    // called just before the ViewModel destroyed
     override fun onCleared() {
         super.onCleared()
         Log.i("GameViewModel", "GameViewModel destroyed!")
