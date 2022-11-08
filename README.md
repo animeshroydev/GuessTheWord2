@@ -1,4 +1,4 @@
-ViewModel and ViewModelFactory - Starter Code
+ViewModel and ViewModelFactory - Finished Code
 ==================================
 
 Use as starter code for the ViewModel codelab.
