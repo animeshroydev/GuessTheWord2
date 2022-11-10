@@ -62,6 +62,7 @@ class ScoreFragment : Fragment() {
         viewModel = ViewModelProvider(this, viewModelFactory)
             .get(ScoreViewModel::class.java)
 
+        binding.scoreViewModel = viewModel
 
         // binding.scoreText.text = viewModel.score.toString()
 
@@ -70,7 +71,6 @@ class ScoreFragment : Fragment() {
             binding.scoreText.text = it.toString()
         })
 
-        binding.playAgainButton.setOnClickListener {  viewModel.onPlayAgain()  }
 
         // Navigates back to game when button is pressed
         viewModel.eventPlayAgain.observe(viewLifecycleOwner, Observer { playAgain ->
