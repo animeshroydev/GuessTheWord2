@@ -68,12 +68,6 @@ class GameFragment : Fragment() {
             if (hasFinished) gameFinished()
         })
 
-        /** Setting up LiveData observation relationship **/
-        viewModel.score.observe(viewLifecycleOwner, Observer { newScore ->
-            binding.scoreText.text = newScore.toString()
-        })
-
-
 
         return binding.root
 
