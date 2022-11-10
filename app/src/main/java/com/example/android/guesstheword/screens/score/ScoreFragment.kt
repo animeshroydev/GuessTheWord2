@@ -63,13 +63,10 @@ class ScoreFragment : Fragment() {
             .get(ScoreViewModel::class.java)
 
         binding.scoreViewModel = viewModel
+        binding.lifecycleOwner = viewLifecycleOwner
 
         // binding.scoreText.text = viewModel.score.toString()
 
-        /** Add observer for score **/
-        viewModel.score.observe(viewLifecycleOwner, Observer {
-            binding.scoreText.text = it.toString()
-        })
 
 
         // Navigates back to game when button is pressed
